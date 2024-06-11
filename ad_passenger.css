@@ -1,0 +1,170 @@
+/* set the font family and size for the whole page */
+* {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* center the bus div and set its width and margin */
+.bus {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* set the position, height, and background color of the exit div */
+.exit {
+    position: relative;
+    height: 50px;
+    background-color: #d8d8d8;
+}
+
+/* set the content, position, size, color, and font of the driver's seat span */
+.driver::before {
+    content: "Driver";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 0;
+    top: 0;
+    background-color: yellow;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 50px;
+    text-align: center;
+}
+
+/* set the content, position, size, color, and font of the door span */
+.door::before {
+    content: "Door";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 0;
+    top: 0;
+    background-color: yellow;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 50px;
+    text-align: center;
+}
+
+/* set the list style, padding, and margin of the seats ordered list */
+.seats {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* set the display, flex, and padding of the seat list item */
+.seat {
+    display: flex;
+    flex: 0 0 14.28571428571429%;
+    padding: 5px;
+    position: relative;
+}
+
+/* set the margin of the third seat list item */
+.seat:nth-child(3) {
+    margin-right: 14.28571428571429%;
+}
+
+/* set the position and opacity of the seat input element */
+.seat input[type=checkbox] {
+    position: absolute;
+    opacity: 0;
+}
+
+/* set the background, animation, and cursor of the seat label element when the input is checked */
+.seat input[type=checkbox]:checked + label {
+    background: #bada55;
+    animation-name: rubberBand;
+    animation-duration: 300ms;
+    animation-fill-mode: both;
+    cursor: pointer;
+}
+
+/* set the background, text, overflow, and cursor of the seat label element when the input is disabled */
+.seat input[type=checkbox]:disabled + label {
+    background: #dddddd;
+    text-indent: -9999px;
+    overflow: hidden;
+    cursor: not-allowed;
+}
+
+/* set the content, position, size, color, and font of the seat label element when the input is disabled */
+.seat input[type=checkbox]:disabled + label::after {
+    content: "X";
+    text-indent: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+/* set the display, position, size, color, font, background, and border of the seat label element */
+.seat label {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.5rem;
+    text-align: center;
+    background: #F42536;
+    border-radius: 5px;
+    animation-duration: 300ms;
+    animation-fill-mode: both;
+}
+
+/* set the content, position, size, color, background, and border of the seat label element */
+.seat label::before {
+    content: "";
+    position: absolute;
+    width: 75%;
+    height: 75%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 3px;
+}
+
+/* set the cursor and box shadow of the seat label element when hovered */
+.seat label:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0px 2px #5C6AFF;
+}
+
+/* define the keyframes for the rubberBand animation */
+@keyframes rubberBand {
+    0% {
+        transform: scale(1, 1);
+    }
+    30% {
+        transform: scale(1.25, 0.75);
+    }
+    40% {
+        transform: scale(0.75, 1.25);
+    }
+    50% {
+        transform: scale(1.15, 0.85);
+    }
+    65% {
+        transform: scale(0.95, 1.05);
+    }
+    75% {
+        transform: scale(1.05, 0.95);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}

@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg, #ebebeb 50%, #ccc 50%);
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.ticket-container {
+    text-align: justify;
+    margin: 50px auto;
+    background-color: antiquewhite;
+    border: 2px solid #333;
+    border-color: black;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    width: 700px;
+    padding: 51px;
+}
+
+.ticket-heading {
+    padding: 15px;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: #fcfbfb;
+    background-color: rgb(21, 21, 21);
+}
+
+.ticket-details {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.ticket-details:last-child {
+    margin-bottom: 0;
+    color: #555;
+}
+
+.fare {
+    font-weight: bold;
+    color: #ff5252; /* Red color for fare */
+}
+
+.home-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.home-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green background color */
+    color: #fff; /* White text color */
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.home-button a:hover {
+    background-color: #2b722f; /* Darker green on hover */
+}
